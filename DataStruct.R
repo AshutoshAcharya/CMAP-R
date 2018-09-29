@@ -77,3 +77,14 @@ sweep(m1,MARGIN = 2, STATS = c(2,3,4,5),FUN = "*")# col wise
 ?addmargins
 addmargins(m1,2,mean)
 addmargins(m1,c(1,2),list(list(mean,sum,max),list(var,sd)))
+
+(rollno = 1:30)
+(sname= paste('student',1:30,sep=" "))
+(gender= sample(c('M','F'),size=30,replace = T,prob = c(.7,.3)))
+(marks=floor(rnorm(30,mean = 50,sd=10)))
+(marks2=ceiling(rnorm(30,40,5)))
+course=sample(c('BBA','MBA'),size = 30,replace = T,prob = c(.5,.5))
+course
+df1=data.frame(rollno,sname,gender,course,marks,marks2,stringsAsFactors = F)
+df1  
+str(df1)
