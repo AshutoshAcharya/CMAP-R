@@ -86,5 +86,31 @@ addmargins(m1,c(1,2),list(list(mean,sum,max),list(var,sd)))
 course=sample(c('BBA','MBA'),size = 30,replace = T,prob = c(.5,.5))
 course
 df1=data.frame(rollno,sname,gender,course,marks,marks2,stringsAsFactors = F)
-df1  
+df1
 str(df1)
+head(df1)
+summary(df1)
+
+
+
+
+#factors
+(grade= sample(c('a','b','c','d'),size = 30,replace = T,prob=c(.2,.4,.3,.1)))
+(gradesF=factor(grade))
+gradesF
+summary(gradesF)
+table(grade)
+table(gradesF)
+class(gradesF)
+(gradesF0=factor(grade, ordered = T))
+(gradesF01=factor(grade,ordered = T,levels = c('c','b','d','a')))
+summary(gradesF01)
+(marks=ceiling(rnorm(30,mean=60,sd=5)))
+(student1=data.frame(marks,gradesF01))
+(boxplot(marks~gradesF01,data = student1))
+boxplot(marks)
+summary(marks)
+abline(h=summary(marks))
+abline
+quantile(marks)
+library(dplyr)
