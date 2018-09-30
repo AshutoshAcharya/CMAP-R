@@ -9,4 +9,5 @@ mtcars%>%group_by(am)%>%summarise(mean(gear))
 mtcars%>%group_by(am)%>%summarise(mean(wt))
 
 filter(mtcars,cyl==8)                                  
-filter(mtcars,row_number())
+filter(mtcars,row_number()
+       
