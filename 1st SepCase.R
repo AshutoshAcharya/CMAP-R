@@ -38,6 +38,7 @@ k1$withinss
 ###Fetch the cluster for each obs
 #k1$cluster
 k1$cluster
+
 k1$centers
 k1$cluster[9000:9800]
 table(k1$cluster)
